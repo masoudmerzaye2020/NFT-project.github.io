@@ -1,0 +1,396 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navigation</title>
+    <link rel="stylesheet" href="./css/tailwind.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!--  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
+    <script src="js/tailwind.config.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
+
+    <link href="fontawesome6/css/fontawesome.css" rel="stylesheet">
+    <link href="fontawesome6/css/brands.css" rel="stylesheet">
+    <link href="fontawesome6/css/solid.css" rel="stylesheet">
+</head>
+<style>
+    .teamname {
+        display: none;
+    }
+
+    .teamcard:hover .teamname {
+        display: block;
+    }
+
+    .teamcard {
+        transition: all .2s ease-in-out;
+    }
+
+    .teamcard:hover {
+        transform: scale(0.9);
+    }
+</style>
+
+<body>
+
+    <header class="">
+        <nav class=" shadow-lg bg-[#0c1f30] relative z-50 ">
+          <div class="w-11/12 md:w-11/12 lg:w-9/12 xl:8/12 2xl:8/12 mx-auto z-50 relative">
+              <div class="flex justify-between ">
+                  <div class="flex   space-x-7">
+                      <div>
+                          <!-- Website Logo -->
+                          <a href="#" class="flex items-center py-4 px-2">
+                              <img src="public/logo.svg" alt="Logo" class="h-[100%] w-[100%] ">
+                          </a>
+                      </div>
+                      <!-- Primary Navbar items -->
+                      
+                  </div>
+                  <!-- Secondary Navbar items -->
+                  <div class="hidden md:flex flex flex-end  items-center space-x-6 ">
+                    <a href="/" class="dao ">HOME</a>
+                    <a href="/"
+                        class="py-4 px-2 text-gray-500 font-semibold hover:dao transition duration-300">THE DAO</a>
+                    <a href="/"
+                        class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">ADOPT A CAT</a>
+                    <a href="/"
+                        class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">DAO ELEMENTS</a>
+                  </div>
+                   
+      
+                  <!-- Mobile menu button -->
+                  <div class=" flex items-center ">
+                      <button class="outline-none mobile-menu-button">
+                          <svg class=" w-6 h-6 text-gray-500 hover:text-green-500 " x-show="!showMenu" fill="none"
+                              stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
+                              stroke="currentColor">
+                              <path d="M4 6h16M4 12h16M4 18h16"></path>
+                          </svg>
+                      </button>
+                  </div>
+              </div>
+          </div>
+          <!-- mobile menu -->
+          <div class="hidden bg-[#0c1f30] h-screen mobile-menu  w-11/12 md:w-11/12 lg:w-9/12 xl:10/12 2xl:10/12 mx-auto  w-full">            
+              <div class="w-full h-screen flex   h-full my-auto">              
+                 <div class=" w-1/12 ">  <h1 class="origin-bottom -rotate-90 text-xl mt-60 text-white"> MENU</h1></div>
+                 <div class="flex w-10/12 w-full">
+                  <nav class="menu-effect2  text-3xl text-white my-auto w-full">
+                      <a href="/about.html" class="navlist">
+                          <div  class="">
+                              <div class="navtitle">
+                                  <h1>About</h1>
+                              </div>
+                              <!-- <span class="navtitle ">Artists</span> -->
+                              <div class="label hidden md:block"><img src="public/about.png" class="w-[340px] h-[60px]] right-0 mr-10 -mb-40 absolute"/> <h1 class="text-xl text-white font-semibold absolute -mt-14 ml-4"> 01</h1></div>
+                          </div>
+                      </a>
+                      <!--  -->
+                      <a href="/team.html" class="navlist">
+                          <div  class="">
+                              <div class="navtitle">
+                                  <h1>Team</h1>
+                              </div>
+                              <!-- <span class="navtitle ">Artists</span> -->
+                              <div class="label hidden md:block"><img src="public/team.png" class="w-[340px] h-[60px]] right-0 mr-10 -mb-40 absolute "/> <h1 class="text-xl text-white font-semibold absolute -mt-14 ml-4"> 02</h1></div>
+                          </div>
+                      </a>
+      
+                      <!--  -->
+                      <a href="#" class="navlist">
+                          <div  class="">
+                              <div class="navtitle">
+                                  <h1>news</h1>
+                              </div>
+                              <!-- <span class="navtitle ">Artists</span> -->
+                              <div class="label hidden md:block"><img src="public/news.png" class="w-[340px] h-[60px]] right-0 mr-10 -mb-40 absolute "/> <h1 class="text-xl text-white font-semibold absolute -mt-14 ml-4"> 03</h1></div>
+                          </div>
+                      </a>
+                      <!--  -->
+                      <a href="#" class="navlist">
+                          <div  class="">
+                              <div class="navtitle">
+                                  <h1>contact</h1>
+                              </div>
+                              <!-- <span class="navtitle ">Artists</span> -->
+                              <div class="label hidden md:block"><img src="public/contact.png" class=" w-[340px] h-[60px]] right-0 mr-10 -mb-80 absolute "/> <h1 class="text-xl text-white font-semibold absolute -mt-14 ml-4"> 04</h1></div>
+                          </div>
+                      </a>
+           
+                  </nav>
+                 </div>
+                 <div class="h-full w-1/12  flex ">
+                  <nav class=" my-auto flex flex-col mx-auto">
+                      <a href="#" class="text-gray-600 hover:text-gray-400 text-3xl py-4"><i class="fa-brands fa-facebook"></i>                        
+                      </a>
+                      <!--  -->
+                      <a href="#" class="text-gray-600 hover:text-gray-400 text-3xl py-4"><i class="fa-brands fa-twitter"></i>
+                         
+                      </a>
+      
+                      <!--  -->
+                      <a href="#" class="text-gray-600 hover:text-gray-400 text-3xl py-4"><i class="fa-brands fa-instagram-square"></i>
+                          
+                      </a>
+                      <!--  -->
+                      <a href="#" class="text-gray-600 hover:text-gray-400 text-3xl py-4"><i class="fa-brands fa-telegram"></i>
+                          
+                      </a>
+           
+                      <a href="" class="text-gray-600 hover:text-gray-400 text-3xl py-4"><i class="fa-solid fa-envelope-dot"></i></a>
+                  </nav>
+                     
+                 </div>
+      
+      
+              </div>
+          </div>
+      
+      </nav>
+      </header>
+
+
+    <!-- Footer goes here -->
+    <section id="team" class="bg-[#0c1f30] relative z-30">
+        <div class="relative overflow-hidden flex">
+            <div class="grid md:gap-4 gap-2  lg:grid-cols-6 md:grid-cols-4 grid-cols-2 md:origin-center md:transform md:-rotate-6">
+                <div>
+                    <div class="relative teamcard">
+                        <img src="public/Gutta Den.jpg" alt="" class="teamimage w-[400px] h-[450px] rounded-lg">
+                        <div class="teamname absolute bottom-0">
+                            <h1 class="lg:text-2xl md:text-xl text-lg px-2"> Gutta Den</h1>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="relative teamcard">
+                        <img src="public/Gutta Ric.jpg" alt="" class="teamimage w-[400px] h-[450px] rounded-lg">
+                        <div class="teamname absolute bottom-0">
+                            <h1 class="lg:text-2xl md:text-xl text-lg px-2"> Gutta Den</h1>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="relative teamcard">
+                        <img src="public/Gutter Ikarlee1.png" alt="" class="teamimage w-[400px] h-[450px] rounded-lg">
+                        <div class="teamname absolute bottom-0">
+                            <h1 class="lg:text-2xl md:text-xl text-lg px-2"> Gutta Den</h1>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="relative teamcard">
+                        <img src="public/Gutter Mitch2.png" alt="" class="teamimage w-[400px] h-[450px] rounded-lg">
+                        <div class="teamname absolute bottom-0">
+                            <h1 class="lg:text-2xl md:text-xl text-lg px-2"> Gutta Den</h1>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="relative teamcard">
+                        <img src="public/Gutter Ikarlee1.png" alt="" class="teamimage w-[400px] h-[450px] rounded-lg">
+                        <div class="teamname absolute bottom-0">
+                            <h1 class="lg:text-2xl md:text-xl text-lg px-2"> Gutta Den</h1>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="relative teamcard">
+                        <img src="public/Gutter Wang.jpg" alt="" class="teamimage w-[400px] h-[450px] rounded-lg">
+                        <div class="teamname absolute bottom-0">
+                            <h1 class="lg:text-2xl md:text-xl text-lg px-2"> Gutta Den</h1>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="relative teamcard">
+                        <img src="public/gutterpopaca.png" alt="" class="teamimage w-[400px] h-[450px] rounded-lg">
+                        <div class="teamname absolute bottom-0">
+                            <h1 class="lg:text-2xl md:text-xl text-lg px-2"> Gutta Den</h1>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="relative teamcard">
+                        <img src="public/Gutter Popcaca.jpg" alt="" class="teamimage w-[400px] h-[450px] rounded-lg">
+                        <div class="teamname absolute bottom-0">
+                            <h1 class="lg:text-2xl md:text-xl text-lg px-2"> Gutta Den</h1>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="relative teamcard">
+                        <img src="public/Gutta Rice.jpg" alt="" class="teamimage w-[400px] h-[450px] rounded-lg">
+                        <div class="teamname absolute bottom-0">
+                            <h1 class="lg:text-2xl md:text-xl text-lg px-2"> Gutta Den</h1>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="relative teamcard">
+                        <img src="public/Gutter Mitch.png" alt="" class="teamimage w-[400px] h-[450px] rounded-lg">
+                        <div class="teamname absolute bottom-0">
+                            <h1 class="lg:text-2xl md:text-xl text-lg px-2"> Gutta Den</h1>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="relative teamcard">
+                        <img src="public/Gutter Wang.jpg" alt="" class="teamimage w-[400px] h-[450px] rounded-lg">
+                        <div class="teamname absolute bottom-0">
+                            <h1 class="lg:text-2xl md:text-xl text-lg px-2"> Gutta Den</h1>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="relative teamcard">
+                        <img src="public/Gutta Rice.jpg" alt="" class="teamimage w-[400px] h-[450px] rounded-lg">
+                        <div class="teamname absolute bottom-0">
+                            <h1 class="lg:text-2xl md:text-xl text-lg px-2"> Gutta Den</h1>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="relative teamcard">
+                        <img src="public/Gutta Rice.jpg" alt="" class="teamimage w-[400px] h-[450px] rounded-lg">
+                        <div class="teamname absolute bottom-0">
+                            <h1 class="lg:text-2xl md:text-xl text-lg px-2"> Gutta Den</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer goes here -->
+  <section id="footer" class="bg-[#0c1f30] relative z-30">
+    <hr class="border-1 border-gray-700">
+    <div class="  w-11/12 md:w-11/12 lg:w-11/12 xl:10/12 2xl:8/12 mx-auto lg:flex">
+      <div class=" py-4">
+        <div class="flex">
+          <a href="#" class="flex items-center py-4 px-2">
+            <img src="public/logo.svg" alt="Logo" class="h-[100%] w-[100%] ">
+          </a>
+        </div>
+      </div>
+      <div class="flex flex-col py-6 mx-auto ">
+        <div class="flex flex flex-end  items-center space-x-6 mx-auto ">
+          <a href="" class="dao ">HOME</a>
+          <a href="" class="py-4 px-2 text-gray-500 font-semibold transition duration-300">THE DAO</a>
+          <a href="" class="py-4 px-2 text-gray-500 font-semibold  transition duration-300">ADOPT A CAT</a>
+          <a href="" class="py-4 px-2 text-gray-500 font-semibold  transition duration-300">DAO ELEMENTS</a>
+        </div>
+      </div>
+
+
+      <div class="py-6 ">
+        <nav class="  flex  justify-between">
+          <a href="#" class="text-gray-600  hover:text-gray-400 text-3xl p-4"><i class="fa-brands fa-facebook"></i>
+          </a>
+          <a href="#" class="text-gray-600 hover:text-gray-400 text-3xl  p-4"><i class="fa-brands fa-twitter"></i>
+          </a>
+          <a href="#" class="text-gray-600 hover:text-gray-400 text-3xl p-4"><i
+              class="fa-brands fa-instagram-square"></i>
+          </a>
+          <a href="#" class="text-gray-600 hover:text-gray-400 text-3xl p-4"><i class="fa-brands fa-telegram"></i>
+        </nav>
+      </div>
+    </div>
+    <hr class="border-1 border-gray-700">
+    <div class="flex justify-between text-gray-600 text-xl py-6 mx-10">
+      <div>
+        Gutter Cat Gang DAO-- Born from the gutters, evolved for the world.
+      </div>
+      <div>
+        Designed by a Team
+      </div>
+    </div>
+  </section>
+
+
+   <!-- script -->
+
+   <script>
+    $("nav.menu-effect2 span.label").each(function() {
+var splitText = $(this).text().split("");
+$(this).empty();
+for (var i = 0; i < splitText.length; i++) {
+    var char = splitText[i];
+    $(this).append("<div>"+char+"</div>");
+}
+});
+
+$("nav.menu-effect2 a").on("mouseenter", function() {
+anime({
+    targets: $(this).find(".label").get(),
+    
+   
+    opacity:[0,0.9],
+    translateY: [200, -50],
+    opacity: [
+        {value: 0, duration: 100, easing: 'linear'},
+        {value: 1, duration: 100, easing: 'linear'}
+    ],
+/*      scale: [
+     
+        {value: 1.09, duration: 300, easing: 'linear'},
+        {value: 1, duration: 300, easing: 'linear'}
+    ],  */
+});
+});        
+$("nav.menu-effect2 a").on("mouseleave", function() {
+anime({
+    targets: $(this).find(".label").get(),
+    translateY:  200,
+    opacity:[0.9,0],
+    
+  
+ /*    opacity: [
+        {value: 0, duration: 200, easing: 'linear'},
+        {value: 1, duration: 200, easing: 'linear'}
+    ] */
+});
+});
+</script>
+
+<script>
+    $(document).ready(function () {
+        $(".navmenu li .navimage").mouseover(function () {
+            $(this).parent('li').next('li').removeClass("hidden");
+        });
+
+        $(".navmenu li .navimage").mouseout(function () {
+            $(this).parent('li').next('li').addClass("hidden");
+        });
+    }); 
+</script>
+
+<script>
+    const btn = document.querySelector("button.mobile-menu-button");
+    const menu = document.querySelector(".mobile-menu");
+    btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+    });
+    $('.place-image').hover(
+        function () {
+            $('.place-image').fadeIn('slow');
+        }, function () {
+            $('.place-image').fadeOut('slow');
+        }
+    );
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+
+</html>
