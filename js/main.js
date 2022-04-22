@@ -26,6 +26,7 @@
   /* end of hero images moving */
 
 
+
   /* index rotating idon */
   anime({
     targets: '.image1_2_14',
@@ -39,7 +40,24 @@
    /* end index rotating idon */
 
 
-
+   /* fixed icon rotation */
+   anime({
+    targets: '.rotationtext',    
+    rotate: 360,
+  easing: 'linear',
+  loop: true,
+  
+  duration:9000,
+  });
+  anime({
+    targets: '.rotationarrow',    
+    rotate: -360,
+  easing: 'linear',
+  loop: true,
+  
+  duration:9000,
+  });
+ /* end rollling */
 
   /* Index page image to left and right */
   function getScrollPercent() {
@@ -50,14 +68,14 @@
     return (h[st]||b[st]) / ((h[sh]||b[sh]) - h.clientHeight) * 100
 }
 const
-	 parent = document.querySelector('.outerHeight'),
+	parent = document.querySelector('.outerHeight'),
 	els = document.querySelectorAll('.image1 .image2'),
 	tl = anime.timeline({ autoplay: false })
     t2 = anime.timeline({ autoplay: false })
 
         tl.add({
             targets: ' .image1',
-            rotateX: 50,
+            /* rotateX: 50, */
             translateX: -400,            
             easing: 'easeInOutSine',                         
             opacity: ['0.5', '1'],
@@ -100,31 +118,66 @@ window.addEventListener('scroll', () => {
 /* about page circles  */
 
 
-const t = anime.timeline({    
+const t1122 = anime.timeline({    
     easing: 'easeInSine',
     loop:true,
      
   });  
-  t.add({
+  t1122.add({
     targets: '.image1_28_3',
     easing: 'linear',
-    rotate: [-113,67],
-    duration: 2000, 
-    endDelay:2000,    
+    rotate: [160],
+    duration: 2000,      
+    
+  })
+  .add({
+    targets: '.image2_28_3',
+    easing: 'linear',
+    rotate: [160],
+    duration: 2000,      
     
   })
  .add({
-    targets: '.image1_28_3',
+    targets: '.image1_28_3 , .image2_28_3',
     easing: 'linear',
+    
    /*  direction: 'reverse', */
-    rotate: [67,-113],
+    rotate: [0],
     duration: 2000,   
  });
+
+ const tt = anime.timeline({    
+  easing: 'easeInSine',
+  loop:true,
+   
+});  
+tt.add({
+  targets: '.image3_28_3',
+  easing: 'linear',
+  rotate: -136,
+  duration: 2000, 
+  delay:2000,    
+  
+})
+.add({
+  targets: '.image3_28_3',
+  easing: 'linear',
+  rotate: 0,
+  duration: 2000, 
+  delay:2000,    
+  
+});
+
+/* section circle */
+
+
+
+
 
 
  /* secondcircle */
 
- const tt = anime.timeline({    
+/*  const tt = anime.timeline({    
     easing: 'easeInSine',
     loop:true,
      
@@ -144,11 +197,11 @@ const t = anime.timeline({
     rotate: 0,
     duration: 2000,
        
- });
+ }); */
 
  /*  third circle */
 
-  const ttt = anime.timeline({    
+/*   const ttt = anime.timeline({    
     easing: 'easeInSine',
     loop:true,
      
@@ -168,5 +221,5 @@ const t = anime.timeline({
     duration: 2000,
     endDelay:2000,
        
- }) ;
+ }) ; */
 

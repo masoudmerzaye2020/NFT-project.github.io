@@ -2,6 +2,37 @@ body{
   background-color: #0c1f30;
 }
 
+@font-face {
+  font-family: 'MyWebFont';
+  src:  url('/fonts/NeueMachina-Light.woff') format('woff'),
+        url('/fonts/NeueMachina-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'NeuemachinaUltrabold';
+  src:  url('/fonts/NeueMachina-Ultrabold.woff') format('woff'),
+        url('/fonts/NeueMachina-Ultrabold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'MyParagraph';
+  src: url('fonts/noto-sans.regular.woff') format('woff');
+}
+
+.titlebold{
+  font-family: 'NeuemachinaUltrabold', Fallback, sans-serif;
+  /* font-weight: 700;
+  font-size: 72px; */
+}
+
+.title{
+  font-family: 'MyWebFont', Fallback, sans-serif;
+}
+
+p{
+  font-family: 'MyParagraph', Fallback, sans-serif;
+}
+ 
 .image
 /* .navmenu .hidden {
   display: none;
@@ -30,6 +61,14 @@ body{
   letter-spacing: 1px;
   text-transform: uppercase;
   
+}
+
+.navlist .label {
+  display: none;
+}
+ 
+.navlist:hover .label{
+  display: block;
 }
 
 .navtitle:hover{   
@@ -86,6 +125,22 @@ body{
 .image3_28_3{
   transform-box: fill-box;
     transform-origin: center;
+}
+
+/*  */
+.rotationtext {
+  transform-box: fill-box;
+    transform-origin: center;
+}
+.rotationarrow {
+  transform-box: fill-box;
+    transform-origin: center;
+}
+
+.stickytotop{
+  position: -webkit-sticky;
+  position: sticky;
+  top: 130px;
 }
 
 
@@ -185,13 +240,14 @@ body{
     -webkit-text-fill-color: transparent;
   } 
   
-  .image1 {
+  .image1 .image2 {
    width: 100%;   
-   height: 400px;
-    padding-top: 50px;
-    overflow: hidden;
-    transform: rotate(-58deg);
-  transform-origin: 20% 40%;
+   height: 600px;
+    padding-top: 30px;
+    margin-top: 10px;
+ /*    overflow: hidden; */
+/*     transform: rotate(-58deg);
+  transform-origin: 20% 40%; */
  
 }
 

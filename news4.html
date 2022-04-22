@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/tailwind.config.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js"></script>
+    <script src="https://unpkg.com/animejs@3.0.1/lib/anime.min.js"></script>
+    <script src="https://unpkg.com/animejs-player@1.0.8/index.bundle.js"></script>
+    <script src="https://unpkg.com/@mui/material@latest/umd/material-ui.development.js"></script>
+    <!-- HEADER -->
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
+
+    <!-- font awesome links -->
+    <!-- font awesome -->
+    <link href="fontawesome6/css/fontawesome.css" rel="stylesheet">
+    <link href="fontawesome6/css/brands.css" rel="stylesheet">
+    <link href="fontawesome6/css/solid.css" rel="stylesheet">
+
+    <title> Project - 2</title>
+</head>
+
+<body>
+
+
+    <header class="">
+        <nav class=" shadow-lg bg-[#0c1f30] relative z-50 ">
+            <div class="w-11/12 md:w-11/12 lg:w-9/12 xl:8/12 2xl:8/12 mx-auto z-50 relative">
+                <div class="flex justify-between ">
+                    <div class="flex   space-x-7">
+                        <div>
+                            <!-- Website Logo -->
+                            <a href="#" class="flex items-center py-4 px-2">
+                                <img src="public/logo.svg" alt="Logo" class="h-[100%] w-[100%] ">
+                            </a>
+                        </div>
+                        <!-- Primary Navbar items -->
+
+                    </div>
+                    <!-- Secondary Navbar items -->
+                    <div class="hidden md:flex flex flex-end  items-center space-x-6 ">
+                        <a href="/" class="dao ">HOME</a>
+                        <a href="/" class="py-4 px-2 text-gray-500 font-semibold hover:dao transition duration-300">THE
+                            DAO</a>
+                        <a href="/"
+                            class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">ADOPT
+                            A CAT</a>
+                        <a href="/"
+                            class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">DAO
+                            ELEMENTS</a>
+                    </div>
+
+
+                    <!-- Mobile menu button -->
+                    <div class=" flex items-center ">
+                        <button class="outline-none mobile-menu-button">
+                            <svg class=" w-6 h-6 text-gray-500 hover:text-green-500 " x-show="!showMenu" fill="none"
+                                stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path d="M4 6h16M4 12h16M4 18h16"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- mobile menu -->
+            <div
+                class="hidden bg-[#0c1f30] h-screen mobile-menu  w-11/12 md:w-11/12 lg:w-9/12 xl:10/12 2xl:10/12 mx-auto  w-full">
+                <div class="w-full h-screen flex   h-full my-auto">
+                    <div class=" w-1/12 ">
+                        <h1 class="origin-bottom -rotate-90 text-xl mt-60 text-white"> MENU</h1>
+                    </div>
+                    <div class="flex w-10/12 w-full">
+                        <nav class="menu-effect2  text-3xl text-white my-auto w-full">
+                            <a href="/about.html" class="navlist">
+                                <div class="">
+                                    <div class="navtitle">
+                                        <h1>About</h1>
+                                    </div>
+                                    <!-- <span class="navtitle ">Artists</span> -->
+                                    <div class="label hidden md:block"><img src="public/about.png"
+                                            class="hidden w-[340px] h-[60px]] right-0 mr-10 -mb-40 absolute " />
+                                        <h1 class="text-xl text-white font-semibold absolute -mt-14 ml-4"> 01</h1>
+                                    </div>
+                                </div>
+                            </a>
+                            <!--  -->
+                            <a href="/team.html" class="navlist">
+                                <div class="">
+                                    <div class="navtitle">
+                                        <h1>Team</h1>
+                                    </div>
+                                    <!-- <span class="navtitle ">Artists</span> -->
+                                    <div class="label hidden md:block"><img src="public/team.png"
+                                            class="w-[340px] h-[60px]] right-0 mr-10 -mb-40 absolute " />
+                                        <h1 class="text-xl text-white font-semibold absolute -mt-14 ml-4"> 02</h1>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <!--  -->
+                            <a href="/news.html" class="navlist">
+                                <div class="">
+                                    <div class="navtitle">
+                                        <h1>news</h1>
+                                    </div>
+                                    <!-- <span class="navtitle ">Artists</span> -->
+                                    <div id="label" class="label hidden md:block"><img src="public/news.png"
+                                            class="w-[340px] h-[60px]] right-0 mr-10 -mb-40 absolute " />
+                                        <h1 class="text-xl text-white font-semibold absolute -mt-14 ml-4"> 03</h1>
+                                    </div>
+                                </div>
+                            </a>
+                            <!--  -->
+                            <a href="#" class="navlist">
+                                <div class="">
+                                    <div class="navtitle">
+                                        <h1>contact</h1>
+                                    </div>
+                                    <!-- <span class="navtitle ">Artists</span> -->
+                                    <div class="label hidden md:block"><img src="public/contact.png"
+                                            class=" w-[340px] h-[60px]] right-0 mr-10 -mb-80 absolute " />
+                                        <h1 class="text-xl text-white font-semibold absolute -mt-14 ml-4"> 04</h1>
+                                    </div>
+                                </div>
+                            </a>
+
+                        </nav>
+                    </div>
+                    <div class="h-full w-1/12  flex ">
+                        <nav class=" my-auto flex flex-col mx-auto">
+                            <a href="#" class="text-gray-600 hover:text-gray-400 text-3xl py-4"><i
+                                    class="fa-brands fa-facebook"></i>
+                            </a>
+                            <!--  -->
+                            <a href="#" class="text-gray-600 hover:text-gray-400 text-3xl py-4"><i
+                                    class="fa-brands fa-twitter"></i>
+
+                            </a>
+
+                            <!--  -->
+                            <a href="#" class="text-gray-600 hover:text-gray-400 text-3xl py-4"><i
+                                    class="fa-brands fa-instagram-square"></i>
+
+                            </a>
+                            <!--  -->
+                            <a href="#" class="text-gray-600 hover:text-gray-400 text-3xl py-4"><i
+                                    class="fa-brands fa-telegram"></i>
+
+                            </a>
+
+                            <a href="" class="text-gray-600 hover:text-gray-400 text-3xl py-4"><i
+                                    class="fa-solid fa-envelope-dot"></i></a>
+                        </nav>
+
+                    </div>
+
+
+                </div>
+            </div>
+
+        </nav>
+    </header>
+
+    <section id="news4">
+        <div class="bg-[#0c1f30] pl-6 text-gray-500 lg:w-9/12 md:w-10/12 w-12/12   mx-auto">
+            <div class="md:flex w-full relative mx-auto">
+                <div class="hidden md:block md:w-2/12  ">
+                    NEWSLETTER
+                </div>
+                <div class="md:w-3/12 md:order-last">
+                    <div class="flex border-b border-gray-700 pb-4">
+                        <div class=""> Number: </div>
+                        <div class="text-4xl text-white pl-4"> O4</div>
+                    </div>
+                    <div class="flex border-b border-gray-700 pb-4">
+                        <div>InSight:</div>
+                        <div class="pl-4"> As people approach the NFT space the communities they encounter have more of an
+                            impact than any particular platform.</div>
+                    </div>
+                    <div class="flex">
+                        <div>
+                            Action
+                        </div>
+                        <div class="flex pl-6 space-x-4 text-white flex-col ">
+                            <div> facbook</div>
+                            <div> Tweeter</div>
+                            <div>Linked In</div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="md:w-7/12 md:px-8">
+                    <h1 class="text-3xl md:text-4xl lg:text-6xl text-white font-bold">NFT COMMUNITIES FOR ARTISTS & COLLECTOR</h1>
+                    <p class="pt-8">Just a few months ago, Jazmine Boykins was posting her artwork online for free. The
+                        20-year-old digital artist’s dreamy animations of Black life were drawing plenty of likes, comments
+                        and shares, but not much income, aside from money she made selling swag with her designs between
+                        classes at North Carolina A&T State University.
+    
+                        But Boykins has recently been selling the same pieces for thousands of dollars each, thanks to an
+                        emerging technology upending the rules of digital ownership: NFTs, or non-fungible tokens.
+                        NFTs—digital tokens tied to assets that can be bought, sold and traded—are enabling artists like
+                        Boykins to profit from their work more easily than ever. “At first, I didn’t know if it was
+                        trustworthy or legit,” says Boykins, who goes by the online handle “BLACKSNEAKERS” and who has sold
+                        more than $60,000 in NFT art over the past six months. “But to see digital art being bought at these
+                        prices, it’s pretty astounding. It’s given me the courage to keep going.”
+    
+                        NFTs are having their big-bang moment: collectors and speculators have spent more than $200 million
+                        on an array of NFT-based artwork, memes and GIFs in the past month alone, according to market
+                        tracker NonFungible.com, compared with $250 million throughout all of 2020. And that was before the
+                        digital artist Mike Winkelmann, known as Beeple, sold a piece for a record-setting $69 million at
+                        famed auction house Christie’s on March 11—the third highest price ever fetched by any currently
+                        living artist, after Jeff Koons and David Hockney.</p>
+                    <h1 class="text-white text-4xl pt-6">NFTs are best understood as computer files combined with proof of
+                        ownership and authenticity, like a deed.</h1>
+                    <p class="pt-6">
+                        Like cryptocurrencies such as Bitcoin, they exist on a blockchain—a tamper-resistant digital public
+                        ledger. But like dollars, cryptocurrencies are “fungible,” meaning one bitcoin is always worth the
+                        same as any other bitcoin. By contrast, NFTs have unique valuations set by the highest bidder, just
+                        like a Rembrandt or a Picasso. Artists who want to sell their work as NFTs have to sign up with a
+                        marketplace, then “mint” digital tokens by uploading and validating their information on a
+                        blockchain (typically the Ethereum blockchain, a rival platform to Bitcoin). Doing so usually costs
+                        anywhere from $40 to $200. They can then list their piece for auction on an NFT marketplace, similar
+                        to eBay.
+    
+                        At face value, the whole enterprise seems absurd: big-money collectors paying six to eight figures
+                        for works that can often be seen and shared online for free. Critics have dismissed the NFT art
+                        craze as just the latest bubble, akin to this year’s boom-and-bust mania around “meme stocks” like
+                        GameStop. The phenomenon is attracting a strange brew of not just artists and collectors, but also
+                        speculators looking to get rich off the latest fad.
+                    </p>
+    
+                    <img src="public/news4.jpeg" alt="news" class="w-full h-[500px] py-8">
+    
+                    <p>
+                        A bubble it may be. But many digital artists, fed up after years of creating content that generates
+                        visits and engagement on Big Tech platforms like Facebook and Instagram while getting almost nothing
+                        in return, have lunged headlong into the craze. These artists of all kinds—authors, musicians,
+                        filmmakers—envision a future in which NFTs transform both their creative process and how the world
+                        values art, now that it’s possible to truly “own” and sell digital art for the first time. “You will
+                        have so many people from different backgrounds and genres coming in to share their art, connect with
+                        people and potentially build a career,” Boykins says. “Artists put so much of their time—and
+                        themselves—into their work. To see them compensated on an appropriate scale, it’s really
+                        comforting.” Technologists, meanwhile, say NFTs are the latest step toward a long-promised
+                        blockchain revolution that could radically transform consumer capitalism, with major implications
+                        for everything from home loans to health care.
+    
+                        Digital art has long been undervalued, in large part because it’s so freely available. To help
+                        artists create financial value for their work, NFTs add the crucial ingredient of scarcity. For some
+                        collectors, if they know the original version of something exists, they’re more likely to crave the
+                        “authentic” piece. Scarcity explains why baseball-card collectors, for example, are willing to pay
+                        $3.12 million for a piece of cardboard with a picture of Honus Wagner, a legendary Pittsburgh
+                        Pirate. It’s also why sneakerheads obsess over the latest limited-edition drops from Nike and
+                        Adidas, and why “pharma bro” Martin Shkreli bought the sole copy of Wu-Tang Clan’s Once Upon a Time
+                        in Shaolin for $2 million in 2015.
+                    </p>
+    
+                    <h1 class="text-white text-4xl py-8">
+                        But baseball cards, sneakers and that Wu-Tang CD all exist in the physical space, so it’s easier to
+                        understand why they’re worth something. It can be harder to understand why digital art, or any other
+                        digital file, has value.
+                    </h1>
+                    <p>
+                        Some digital-art collectors say they’re paying not just for pixels but also for digital artists’
+                        labor–in part, the movement is an effort to economically legitimize an emerging art form. “I want
+                        you to go on my collection and be like, ‘Oh, these are all unique things that stand out,'” says
+                        Shaylin Wallace, a 22-year-old NFT artist and collector. “The artist put so much work into it–and it
+                        was sold for the price that it deserved.” The movement is also taking shape after many of us have
+                        spent most of the past year online. If nearly your whole world is virtual, it makes sense to spend
+                        money on virtual stuff.
+                    </p>
+    
+                    <img src="public/news4-1.jpeg" alt="news" class="py-4 w-full h-[500px]">
+    
+                    <p>
+                        The groundwork for the digital-art boom was laid in 2017 with the launch of CryptoKitties—think
+                        digital Beanie Babies. Fans have spent more than $32 million collecting, trading and breeding these
+                        images of wide-eyed one-of-a-kind cartoon cats. Video gamers, meanwhile, have been pouring cash into
+                        cosmetic upgrades for their avatars—Fortnite players spent an average of $82 on in-game content in
+                        2019—further mainstreaming the idea of spending real-world money on digital goods. At the same time,
+                        cryptocurrencies have been booming in value, fueled in part by celebrity enthusiasts like Elon Musk
+                        and Mark Cuban. Bitcoin, for instance, is up more than 1,000% over the past year, and anything
+                        remotely crypto-adjacent—including NFTs—is getting swept up in that mania.
+    
+                        Sensing an opportunity, tech entrepreneurs and brothers Duncan and Griffin Cock Foster last March
+                        launched an NFT art marketplace called Nifty Gateway. At the time, NFT art was just heating up in
+                        some circles, but it was difficult for newbies to buy, sell and trade pieces. Nifty Gateway
+                        prioritized accessibility and usability, helping fuel wider adoption. “It was such an early stage,
+                        we didn’t have many expectations about how it would turn out,” Duncan Cock Foster says. But Nifty
+                        Gateway users ended up buying and selling more than $100 million worth of art during its first year.
+                        Similar platforms, like SuperRare, OpenSea and MakersPlace, have seen similar surges; they typically
+                        pocket 10% to 15% of initial sales.
+    
+                        Big businesses and celebrities are getting in on the action: NBA Top Shot, the National Basketball
+                        Association’s official platform to buy and sell NFT-based highlights (packaged like digital trading
+                        cards), has racked up over $390 million in sales since its October launch, according to parent
+                        company Dapper Labs. Football star Rob Gronkowski has sold NFT trading cards of Super Bowl
+                        highlights for over $1.6 million; rock band Kings of Leon made over $2 million by selling NFT music.
+                        Twitter founder Jack Dorsey put his first-ever tweet up for auction as an NFT, and it’s expected to
+                        sell for at least $2.5 million. The past few months have been a feeding frenzy, with new highs
+                        almost daily. Perhaps Beeple put it best after his record-setting auction: “I’m pretty f-cking
+                        overwhelmed right now,” he told fans and collaborators gathered on chat app Clubhouse.
+    
+                        So-called whales are making the biggest deals in the NFT art world. These deep-pocketed investors
+                        and cryptocurrency evangelists stand to benefit financially from hyping anything remotely related to
+                        crypto. “A Winklevoss spending 700 grand on a Beeple or whatever is very much marketing spend for an
+                        idea that they are heavily invested in,” the technologist and artist Mat Dryhurst says, referring to
+                        Tyler and Cameron Winklevoss, two well-known cryptocurrency bulls who bought Nifty Gateway in late
+                        2019 for an undisclosed amount.
+    
+                        For technology evangelists, meanwhile, the NFT frenzy is just more evidence of their long-held
+                        beliefs that cryptocurrency, and blockchain platforms more broadly, has the power to change the
+                        world in profound ways. Blockchain technology has already been implemented in attempts to make
+                        voting more secure in Utah, combat insurance fraud at Nationwide Insurance, and secure the medical
+                        data of several U.S. health care companies. Advocates say it could also help companies ensure
+                        transparency in their supply chains, streamline mutual aid efforts and reduce biases in historically
+                        racist loan-application processes.
+    
+                        “The potential societal impact … is so important that we should do everything in our power to make
+                        it manageable, environmentally and otherwise,” Whitaker says. “New idealistic technologies are
+                        always really imperfect in their rollout: they can have a speculative boom, and people can misuse
+                        them in unsavory ways,” she adds. “I try to stay centered on what’s possible.”
+                    </p>
+                </div>
+            </div>
+
+            <hr class="border-1 border-gray-500 mt-12">
+            <div>
+                <h1 class="text-bold text-6xl font-bold hello">
+                    RELATED
+                </h1>
+            </div>
+
+
+
+
+
+        </div>
+    </section>
+
+    <!-- Footer goes here -->
+    <section id="footer" class="bg-[#0c1f30] relative z-30">
+        <hr class="border-1 border-gray-700">
+        <div class="  w-11/12 md:w-11/12 lg:w-11/12 xl:10/12 2xl:8/12 mx-auto lg:flex">
+            <div class=" py-4">
+                <div class="flex">
+                    <a href="#" class="flex items-center py-4 px-2">
+                        <img src="public/logo.svg" alt="Logo" class="h-[100%] w-[100%] ">
+                    </a>
+                </div>
+            </div>
+            <div class="flex flex-col py-6 mx-auto ">
+                <div class="flex flex flex-end  items-center space-x-6 mx-auto ">
+                    <a href="" class="dao ">HOME</a>
+                    <a href="" class="py-4 px-2 text-gray-500 font-semibold transition duration-300">THE DAO</a>
+                    <a href="" class="py-4 px-2 text-gray-500 font-semibold  transition duration-300">ADOPT A CAT</a>
+                    <a href="" class="py-4 px-2 text-gray-500 font-semibold  transition duration-300">DAO ELEMENTS</a>
+                </div>
+            </div>
+
+
+            <div class="py-6 ">
+                <nav class="  flex  justify-between">
+                    <a href="#" class="text-gray-600  hover:text-gray-400 text-3xl p-4"><i
+                            class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="#" class="text-gray-600 hover:text-gray-400 text-3xl  p-4"><i
+                            class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-gray-600 hover:text-gray-400 text-3xl p-4"><i
+                            class="fa-brands fa-instagram-square"></i>
+                    </a>
+                    <a href="#" class="text-gray-600 hover:text-gray-400 text-3xl p-4"><i
+                            class="fa-brands fa-telegram"></i>
+                </nav>
+            </div>
+        </div>
+        <hr class="border-1 border-gray-700">
+        <div class="flex justify-between text-gray-600 text-xl py-6 mx-10">
+            <div>
+                Gutter Cat Gang DAO-- Born from the gutters, evolved for the world.
+            </div>
+            <div>
+                Designed by a Team
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- script -->
+
+    <script>
+
+        /* anime({
+            targets: '.hiddenimage',
+            opacity: 0,
+            delay: 0,
+           
+            
+         
+          }); */
+
+        $("nav.menu-effect2 span.label").each(function () {
+            var splitText = $(this).text().split("");
+            $(this).empty();
+            for (var i = 0; i < splitText.length; i++) {
+                var char = splitText[i];
+                $(this).append("<div>" + char + "</div>");
+            }
+        });
+
+        $("nav.menu-effect2 a").on("mouseenter", function () {
+            anime({
+                targets: $(this).find(".label").get(),
+
+
+                opacity: [0, 0.9],
+                translateY: [200, -50],
+                opacity: [
+                    { value: 0, duration: 100, easing: 'linear' },
+                    { value: 1, duration: 100, easing: 'linear' }
+                ],
+                /*      scale: [
+                     
+                        {value: 1.09, duration: 300, easing: 'linear'},
+                        {value: 1, duration: 300, easing: 'linear'}
+                    ],  */
+            });
+        });
+        $("nav.menu-effect2 a").on("mouseleave", function () {
+            anime({
+                targets: $(this).find(".label").get(),
+                translateY: 200,
+                opacity: [0.9, 0],
+
+
+                /*    opacity: [
+                       {value: 0, duration: 200, easing: 'linear'},
+                       {value: 1, duration: 200, easing: 'linear'}
+                   ] */
+            });
+        });
+
+
+        /* anime({
+            targets: '#label',
+            opacity: 0,
+            delay: 0,
+            duration:100,
+            
+         
+          }); */
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $(".navmenu li .navimage").mouseover(function () {
+                $(this).parent('li').next('li').removeClass("hidden");
+            });
+
+            $(".navmenu li .navimage").mouseout(function () {
+                $(this).parent('li').next('li').addClass("hidden");
+            });
+        }); 
+    </script>
+
+    <script>
+        const btn = document.querySelector("button.mobile-menu-button");
+        const menu = document.querySelector(".mobile-menu");
+        btn.addEventListener("click", () => {
+            menu.classList.toggle("hidden");
+        });
+        $('.place-image').hover(
+            function () {
+                $('.place-image').fadeIn('slow');
+            }, function () {
+                $('.place-image').fadeOut('slow');
+            }
+        );
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
